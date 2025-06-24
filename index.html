@@ -1,7 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vignesh Nagarajan | Solutions Architect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #003366;
+      --bg-light: #f0f4ff;
+      --bg-dark: #1e1e1e;
+      --text-light: #ffffff;
+      --text-dark: #333333;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+    header {
+      background: url('https://source.unsplash.com/1600x400/?technology,cloud') no-repeat center/cover;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: var(--primary);
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+    body.dark-mode .card {
+      background: #2c2c2c;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .cta {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 12px;
+    }
+    .cta a {
+      background: white;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #e6e6e6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+      font-size: 0.9rem;
+    }
+    .toggle-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #blog {
+      margin-top: 50px;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <button class="toggle-button" onclick="document.body.classList.toggle('dark-mode')">🌓 Toggle Theme</button>
+  <header>
+    <h1>Vignesh Nagarajan</h1>
+    <p>Java Solutions Architect | Full Stack Developer | OpenShift Expert</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        With over 9 years of industry experience, I specialize in delivering scalable, secure, and high-performance enterprise applications. As a Technical Solutions Architect, I lead teams through complex transformations — from monolith to microservices, legacy to cloud-native. I thrive on building value-driven, modern platforms for the financial and retirement sectors.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Technologies</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Languages & Frameworks:</strong> Java, Spring Boot, Angular, Kotlin</li>
+        <li><strong>Cloud & DevOps:</strong> AWS, OpenShift, Jenkins, GitHub Actions</li>
+        <li><strong>Cybersecurity Tools:</strong> Nmap, Burp Suite, Metasploit</li>
+        <li><strong>Database & Integration:</strong> Oracle, PostgreSQL, Kong Gateway</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+    <div class="card">
+      <h3>Fee Provisioning System – TIAA</h3>
+      <p>Designed and delivered a microservices-based platform with Angular UI, deployed on OpenShift with CI/CD pipelines — resulting in faster and cheaper operations for a Fortune 500 client.</p>
+    </div>
+    <div class="card">
+      <h3>Unified Workflow Migration</h3>
+      <p>Transformed a legacy Spring MVC app into a modular Angular frontend with RESTful integrations, increasing maintainability and user experience for 5000+ users.</p>
+    </div>
+    <div class="card">
+      <h3>ESAG – Legacy Modernization</h3>
+      <p>Converted mainframe processes into modern Java/Angular architecture, enabling seamless integration and boosting performance significantly.</p>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Technical Blog</h2>
+    <div class="card">
+      <h3>🏗️ Modernizing Monoliths to Microservices</h3>
+      <p>Learn my real-world approach to breaking down monoliths and migrating to Spring Boot-based microservices on OpenShift.</p>
+    </div>
+    <div class="card">
+      <h3>🔐 Securing APIs with Kong and PingFed</h3>
+      <p>Understand API gateway design patterns and security best practices from my latest enterprise integration work.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <h3>Let’s Connect</h3>
+    <p>Open to freelance, full-time, or consulting roles in architecture, development, or cloud modernization.</p>
+    <a href="mailto:vigneshviccky@gmail.com">📨 Message Me</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Vignesh Nagarajan | <a href="https://www.linkedin.com/in/vignesh-nagarajan93/">LinkedIn</a> | <a href="https://github.com/vigneshviccky">GitHub</a></p>
+  </footer>
 </body>
 </html>
